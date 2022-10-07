@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+body::before {
+  content: "";
+  background-image: url(../img/bg.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 43.5vmax;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 992px) {
+  body::before {
+    opacity: 0.4;
+  }
+}
+
+.custom-nav .navbar-brand img {
+  width: 40px;
+  height: 40px;
+}
+
+.custom-nav .navbar-brand span {
+  color: #eb9639;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-left: 0.4em;
+}
+
+@media screen and (max-width: 404px) {
+  .custom-nav .navbar-brand {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.custom-nav #navbarNav .navbar-nav .nav-item .nav-link {
+  color: #586cbd;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-left: 2.4em;
+  -webkit-transition: 0.4s color ease;
+  transition: 0.4s color ease;
+}
+
+.custom-nav #navbarNav .navbar-nav .nav-item .nav-link:hover {
+  color: #30357f;
+}
+
+.custom-nav #navbarNav .navbar-nav .nav-item .sign-up-button {
+  display: inline-block;
+  color: white;
+  background-color: #586cbd;
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 992px) {
+  .custom-nav {
+    margin-top: -1em;
+  }
+}
+
+.custom-section {
+  margin-top: 8em;
+}
+
+.custom-section h2 {
+  font-weight: 700;
+  font-size: 4rem;
+  color: #2c2a55;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.custom-section h3 {
+  font-weight: 500;
+  font-size: 3.5rem;
+  color: #2c2a55;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.custom-section p {
+  color: #586cbd;
+  font-size: 1.1rem;
+  margin-top: 1.5em;
+}
+
+.custom-section a {
+  margin-top: 2.2em;
+  display: inline-block;
+  color: white;
+  background-color: #586cbd;
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.custom-section a:hover {
+  color: #586cbd;
+  border: 1px solid #586cbd;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 992px) {
+  .custom-section {
+    margin-top: 3em;
+    text-align: center;
+  }
+  .custom-section h2,
+  .custom-section h3,
+  .custom-section p {
+    text-shadow: 2px 2px 2px rgba(44, 42, 85, 0.4);
+  }
+}
+
+.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+.content .card .card-body h2 {
+  color: #2c2a55;
+}
+
+.content .card .card-body p {
+  color: #586cbd;
+}
+
+.content .card .card-body li {
+  color: #586cbd;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: absolute;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #30357f;
+}
+
+@media screen and (max-width: 992px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+  }
+  .sidebar .content {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 404px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+.card .cords {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin-top: 1rem;
+}
+/*# sourceMappingURL=main.css.map */
