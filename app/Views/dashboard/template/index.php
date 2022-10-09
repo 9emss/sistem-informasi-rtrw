@@ -30,20 +30,27 @@
     <link href="<?= base_url() ?>/assets/dashboard/css/nucleo-icons.css" rel="stylesheet" />
     <link href="<?= base_url() ?>/assets/dashboard/css/nucleo-svg.css" rel="stylesheet" />
     <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/61c4970be7.js" crossorigin="anonymous"></script>
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
     <link id="pagestyle" href="<?= base_url() ?>/assets/dashboard/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
+
+    <?php
+    if ($param === 'profparam') {
+        echo '<link href="' . base_url() . '/assets/dashboard/css/profile.css" rel="stylesheet" />';
+    }
+    ?>
+
 </head>
 
-<body class="g-sidenav-show  bg-gray-200">
+<body class="g-sidenav-show  bg-gray-200 g-sidenav-hidden">
 
     <!-- Sidebar -->
     <?= $this->include('dashboard/template/sidebar') ?>
     <!-- End Sidebar -->
 
-    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <div class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
 
         <!-- Navbar -->
         <?= $this->include('dashboard/template/navbar') ?>
@@ -60,7 +67,7 @@
             <!-- End Footer -->
 
         </div>
-    </main>
+    </div>
 
     <!--   Core JS Files   -->
     <script src="<?= base_url() ?>/assets/dashboard/js/core/popper.min.js"></script>
@@ -68,6 +75,7 @@
     <script src="<?= base_url() ?>/assets/dashboard/js/plugins/perfect-scrollbar.min.js"></script>
     <script src="<?= base_url() ?>/assets/dashboard/js/plugins/smooth-scrollbar.min.js"></script>
     <script src="<?= base_url() ?>/assets/dashboard/js/plugins/chartjs.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
         var win = navigator.platform.indexOf('Win') > -1;
         if (win && document.querySelector('#sidenav-scrollbar')) {

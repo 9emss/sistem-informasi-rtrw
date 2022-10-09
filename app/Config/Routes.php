@@ -21,11 +21,12 @@ $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
+
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
 // Set `$autoRoutesImproved` to true in `app/Config/Feature.php` and set the following to true.
-// $routes->setAutoRoute(false);
+// $routes->setAutoRoute(true);
 
 /*
  * --------------------------------------------------------------------
@@ -37,6 +38,13 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/dashboard', 'DashboardController::index');
+$routes->post('/user/regencies', 'UserController::regencies');
+
+$routes->group('warga', ['filter' => 'role:developer,admin,user'], function ($routes) {
+    $routes->get('profile/(:segment)', 'UserController::profile/$1');
+    $routes->get('edit-profile/(:segment)', 'UserController::editProfile/$1');
+    $routes->post('update-profile/(:segment)', 'UserController::updateProfile/$1');
+});
 
 /*
  * --------------------------------------------------------------------
